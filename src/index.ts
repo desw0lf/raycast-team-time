@@ -5,10 +5,10 @@ const command = async () => {
 
   const london = now.toLocaleString(undefined, { timeZone: "Europe/London", timeStyle: "short" });
   const berlin = now.toLocaleString(undefined, { timeZone: "Europe/Berlin", timeStyle: "short" });
-  const moscow = now.toLocaleString(undefined, { timeZone: "Europe/Moscow", timeStyle: "short" });
-  const india = now.toLocaleString(undefined, { timeZone: "Asia/Kolkata", timeStyle: "short" });
+  const toronto = now.toLocaleString(undefined, { timeZone: "America/Toronto", timeStyle: "short" });
+  const colombo = now.toLocaleString(undefined, { timeZone: "Asia/Colombo", timeStyle: "short" });
 
-  const subtitle = `🇬🇧 ${london}   🇳🇱🇩🇪🇳🇴🇩🇰🇵🇱 ${berlin}   🇷🇺 ${moscow}   🇮🇳 ${india}`;
+  const subtitle = `🇬🇧 ${london}  🇱🇰 ${colombo}  🇨🇦 ${toronto}  🇧🇪🇳🇱🇩🇪🇳🇴🇩🇰🇵🇱 ${berlin}`;
   await updateCommandMetadata({ subtitle });
 
   if (environment.launchType === LaunchType.UserInitiated) {
